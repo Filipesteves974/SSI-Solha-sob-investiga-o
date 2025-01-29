@@ -37,6 +37,6 @@ def main():
     print('Eq. da Regressão Linear:')
     print(f'y = {m}x + {b}\n' )
     print('Eq. da Reg.Linear(arredondado a 3 casas décimais):')
-    print('y =', round(m, 3), 'x +', round(b, 3))
+    print('y =', round(m, 4), 'x +', round(b, 4))
 
 main()
