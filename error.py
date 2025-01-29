@@ -20,7 +20,7 @@ def erro(y, y1):
     return erros
 
 def main():
-    data = pnd.read_excel
+    data = pnd.read_excel('Localização do ficheiro')
     solea = data['solea'].values
     mud = data['mud'].values
     r = lambda x: Mlin * x + Blin
@@ -30,8 +30,8 @@ def main():
     e1 = erro(solea, solea_r)
     e2 = erro(solea, solea_s)
     plt.figure(figsize=(8, 6), dpi=(300))
-    rect = patches.Rectangle((34.28, -0.1), 16.44, 1.2, alpha=0.2, facecolor='k',
-    label ='Zona de Ausência / Presença Simultânea')
+    rect = patches.Rectangle((34.28, -0.1), 16.44, 1.2, alpha=0.2, facecolor = 'k',
+            label ='Zona de Ausência / Presença Simultânea')
     plt.gca().add_patch(rect)
     plt.plot(mud, e2, 'r -', label ='Regr.Logística')
     plt.plot(mud, e1, 'b–', label ='Regr.Linear')
